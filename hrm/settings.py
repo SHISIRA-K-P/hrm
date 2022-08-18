@@ -216,3 +216,24 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
+
+# CELERY STUFF
+CELERY_BROKER_URL = "redis://localhost:6379"
+CELERY_RESULT_BACKEND = CELERY_BROKER_URL
+CELERY_ACCEPT_CONTENT = ["json"]
+CELERY_TASK_SERIALIZER = "json"
+CELERY_TASK_TRACK_STARTED = True
+
+
+
+
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+#add your host of the email here in this case its Gmail so we are going to use Gmail host
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+#add the port number of the email server
+EMAIL_PORT = 587
+#add your gamil here
+EMAIL_HOST_USER = 'shisirakrishna@gmail.com'
+#add your password here
+EMAIL_HOST_PASSWORD = os.environ.get("SMTP_PASSWORD")

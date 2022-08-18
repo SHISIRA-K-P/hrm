@@ -8,7 +8,7 @@ from .serializers import UserSerializer,LoginSerializer
 from .models import User 
 from django.contrib.auth import authenticate,login
 from rest_framework import authentication,permissions
-
+from .tasks import send_maildetails
 
 class UserView(APIView):
     # permission_classes=[permissions.IsAuthenticated]
@@ -20,8 +20,8 @@ class UserView(APIView):
     def post(self,request,*args,**kwargs):
         serializer=UserSerializer(data=request.data)
         if serializer.is_valid():
-
             serializer.save()
+            send_maildetails.delay(request.data["email"])
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)

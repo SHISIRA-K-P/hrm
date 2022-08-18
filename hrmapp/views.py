@@ -125,3 +125,5 @@ class StatusUpdateView(APIView):
              return Response({"msg":"user isn't superuser"},status=status.HTTP_401_UNAUTHORIZED)
 
 
+
+

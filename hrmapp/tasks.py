@@ -15,7 +15,7 @@ from hrm import settings
 # def test():
 #     logger.info('test')
 
-# fknhkdgoiihyangh
+
 
 
 @shared_task(name='send_email_task')

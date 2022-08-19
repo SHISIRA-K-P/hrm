@@ -13,9 +13,13 @@ from .tasks import send_maildetails
 class UserView(APIView):
     # permission_classes=[permissions.IsAuthenticated]
     def get(self,request,*args,**kwargs):
-        user_obj=User.objects.all()
-        serializer=UserSerializer(user_obj,many=True)
-        return Response(serializer.data,status=status.HTTP_200_OK)
+        try:
+            user_obj=User.objects.all()
+            serializer=UserSerializer(user_obj,many=True)
+            return Response(serializer.data,status=status.HTTP_200_OK)
+        except Exception as error:
+            print("\nException Occured",error)
+
     
     def post(self,request,*args,**kwargs):
         serializer=UserSerializer(data=request.data)
@@ -30,24 +34,36 @@ class UserView(APIView):
 class UserDetailView(APIView):
     # permission_classes=[permissions.IsAuthenticated]
     def get(self,request,*args,**kwargs):
-        id=kwargs.get("id")
-        user_obj=User.objects.get(id=id)
-        serializer=UserSerializer(user_obj)
-        return Response(serializer.data,status=status.HTTP_200_OK)
-    def put(self,request,*args,**kwargs):
-        id=kwargs.get("id")
-        patient_obj=User.objects.get(id=id)
-        serializer=UserSerializer(instance=patient_obj,data=request.data)
-        if serializer.is_valid():
-            serializer.save()
+        try:
+            id=kwargs.get("id")
+            user_obj=User.objects.get(id=id)
+            serializer=UserSerializer(user_obj)
             return Response(serializer.data,status=status.HTTP_200_OK)
-        else:
-            return Response(serializer.error_messages)
+        except Exception as error:
+            print("\nException Occured",error)
+
+    def put(self,request,*args,**kwargs):
+        try:
+            id=kwargs.get("id")
+            patient_obj=User.objects.get(id=id)
+            serializer=UserSerializer(instance=patient_obj,data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data,status=status.HTTP_200_OK)
+            else:
+                return Response(serializer.error_messages)
+        except Exception as error:
+            print("\nException Occured",error)
+
     def delete(self,request,*args,**kwargs):
-        id=kwargs.get("id")
-        user_obj=User.objects.get(id=id)
-        user_obj.delete()
-        return Response({"msg":"deleted"},status=status.HTTP_200_OK)
+        try:
+            id=kwargs.get("id")
+            user_obj=User.objects.get(id=id)
+            user_obj.delete()
+            return Response({"msg":"deleted"},status=status.HTTP_200_OK)
+        except Exception as error:
+            print("\nException Occured",error)
+
 
 
 

@@ -153,6 +153,3 @@ class StatusUpdateView(APIView):
                 return Response({"msg": "user isn't superuser"})
         except Exception as error:
             print("\nException Occured", error)
-
-
-

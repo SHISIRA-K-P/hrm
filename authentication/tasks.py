@@ -12,6 +12,3 @@ def send_maildetails(email):
        from_email=settings.EMAIL_HOST_USER,
        recipient_list=[email],
        fail_silently=True, )
-
-
-

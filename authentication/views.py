@@ -81,3 +81,4 @@ class SignInView(APIView):
                 return Response({"msg": "success"})
             else:
                 return Response({"msg": "Invalid credetials"})
+                

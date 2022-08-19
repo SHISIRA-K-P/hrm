@@ -1,4 +1,5 @@
 import json
+from telnetlib import STATUS
 from django.shortcuts import render
 from rest_framework import status
 from rest_framework.response import Response
@@ -12,11 +13,13 @@ import logging as log
 
 
 class LeaveView(APIView):
+    ''' get:list all applied leave
+        post:apply for leave using'''
     permission_classes = [permissions.IsAuthenticated]
     
     def get(self, request, *args, **kwargs):
         try:
-            leave_obj = Leave. objects.all()
+            leave_obj = Leave.objects.all()
             log.info("Retrieve  all object")
             serializer = LeaveSerializer(leave_obj, many=True)
             log.info("serializing data")
@@ -25,21 +28,25 @@ class LeaveView(APIView):
             print("\nException Occured", error)
 
     def post(self, request, *args, **kwargs):
-        serializer = LeaveSerializer(data=request.data)
-        log.info("serializing data")
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        status = request.data.get("status")
+        if status in "apply,cancel":
+            serializer = LeaveSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
-            return Response(serializer.errors)
-            
+            return Response({"msg": "invalid User status"})
+  
             
 class LeaveDetailView(APIView):
     permission_classes = [permissions.IsAuthenticated]
     
     def get(self, request, *args, **kwargs):
         try:
-            id = kwargs.get("id")
+            id = kwargs.get("leave_id")
+            print(id)
             leave_obj = Leave.objects.get(id=id)
             log.info("Retrieve  an object with specific id")
             serializer = LeaveSerializer(leave_obj)
@@ -48,15 +55,19 @@ class LeaveDetailView(APIView):
             print("\nException Occured", error)
 
     def put(self, request, *args, **kwargs):
-        id = kwargs.get("id")
-        leave_obj = Leave.objects.get(id=id)
-        serializer = LeaveSerializer(leave_obj, data=request.data)
-       
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
+        
+        status = request.data.get("status")
+        if status in "apply,cancel":
+            id = kwargs.get("leave_id")
+            leave_obj = Leave.objects.get(id=id)
+            serializer = LeaveSerializer(leave_obj, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
-            return Response(serializer.errors)
+            return Response({"msg": "invalid User status"})
 
     def delete(self, request, *args, **kwargs):
         try:
@@ -94,7 +105,7 @@ class FeedbackDetailView(APIView):
     
     def get(self, request, *args, **kwargs):
         try:
-            id = kwargs.get("id")
+            id = kwargs.get("feed_id")
             feedback_obj = Feedback.objects.get(id=id)
             serializer = FeedbackSerializer(feedback_obj)
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -103,7 +114,7 @@ class FeedbackDetailView(APIView):
 
     def put(self, request, *args, **kwargs):
         try:
-            id = kwargs.get("id")
+            id = kwargs.get("feed_id")
             feedback_obj = Feedback.objects.get(id=id)
             serializer = FeedbackSerializer(instance=feedback_obj, data=request.data)
             if serializer.is_valid():
@@ -129,7 +140,7 @@ class StatusUpdateView(APIView):
 
     def get(self, request, *args, **kwargs):
         try:
-            id = kwargs.get("id")
+            id = kwargs.get("status_id")
             user_obj = User.objects.get(id=id)
             leave_obj = Leave.objects.get(user=user_obj)
             serializer = LeaveSerializer(leave_obj)
@@ -139,7 +150,7 @@ class StatusUpdateView(APIView):
     
     def put(self, request, *args, **kwargs):
         try:
-            id = kwargs.get("id")
+            id = kwargs.get("status_id")
             user_obj = User.objects.get(id=id) 
             if user_obj.is_superuser:
                     leave_obj = Leave.objects.get(user=user_obj)
@@ -153,3 +164,4 @@ class StatusUpdateView(APIView):
                 return Response({"msg": "user isn't superuser"})
         except Exception as error:
             print("\nException Occured", error)
+

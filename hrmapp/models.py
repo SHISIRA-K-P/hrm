@@ -7,14 +7,14 @@ import datetime
 
 class Leave(models.Model):
     date_from = models.DateField(default=datetime.date.today)
-    date_to = models.DateField(default=datetime.date.today)
+    date_to = models.DateField(null=True)
     leave_status = (
-        ('select', 'select'),
+        ('apply','apply'),
         ('pending', 'pending'),
         ('approved', 'approved'),
         ('cancel', 'cancel'),
         ('reject', 'reject'), )
-    status = models.CharField(choices=leave_status, default="select", max_length=20)
+    status = models.CharField(choices=leave_status, default="apply", max_length=20)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True) 
 
     def _str__(self):

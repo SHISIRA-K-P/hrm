@@ -452,3 +452,515 @@ Traceback (most recent call last):
     assert isinstance(response, HttpResponseBase), (
 AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
 "GET /api/v1/status/3 HTTP/1.1" 500 82979
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 60, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97299
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 64, in put
+    raise Exception("invalid user status")
+Exception: invalid user status
+"PUT /api/v1/leave/1 HTTP/1.1" 500 96066
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 65, in put
+    return Response(serializer.error, status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'serializer' referenced before assignment
+"PUT /api/v1/leave/1 HTTP/1.1" 500 96440
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 61, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97318
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 61, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97302
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 61, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97298
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 60, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97337
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 60, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97337
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 60, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97373
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 60, in put
+    return Response(serializer.data, status=status.HTTP_200_OK)
+AttributeError: 'str' object has no attribute 'HTTP_200_OK'
+"PUT /api/v1/leave/1 HTTP/1.1" 500 97373
+Internal Server Error: /api/v1/leave
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 40, in post
+    leave_obj = Leave.objects.get(id=id)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+hrmapp.models.Leave.DoesNotExist: Leave matching query does not exist.
+"POST /api/v1/leave HTTP/1.1" 500 104734
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82960
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82960
+Internal Server Error: /api/v1/leave
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearlsoft/Desktop/Projects/hrm/hrmapp/views.py", line 40, in post
+    leave_obj = Leave.objects.get(id=id)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+hrmapp.models.Leave.DoesNotExist: Leave matching query does not exist.
+"POST /api/v1/leave HTTP/1.1" 500 104734
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/1 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/1 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/1 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/1
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/1 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/3
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/3 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/3
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/3 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/3
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/3 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82991
+Internal Server Error: /api/v1/leave/2
+Traceback (most recent call last):
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/pearlsoft/.local/share/virtualenvs/hrm-pSYZkTnl/lib/python3.8/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"GET /api/v1/leave/2 HTTP/1.1" 500 82991

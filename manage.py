@@ -1,9 +1,8 @@
-#!/usr/bin/env python
-#dd
+# !/usr/bin/env python
+# dd
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
 
 
 def main():

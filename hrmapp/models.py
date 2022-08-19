@@ -23,6 +23,7 @@ class Leave(models.Model):
 
 # Create model Feedback
 
+
 class Feedback(models.Model):
     
     content = models.CharField(max_length=250)
